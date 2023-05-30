@@ -1,0 +1,3 @@
+python-dotenv
+secure-smtplib
+mysql-connector-python

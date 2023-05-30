@@ -91,7 +91,7 @@ def send_email(mail_total, sms_total):
         logger.warning(f"Email Configs: {email_config}")
         #for SMTP over SSL (SMTPS)
         with smtplib.SMTP_SSL(email_config['smtp_host'], email_config['smtp_port']) as server:
-            print("Logging in...")
+            logger.warning("Logging in...")
             server.login(email_config['smtp_username'], email_config['smtp_password'])
             server.send_message(msg)
             logger.warning("Email sent successfully!")
